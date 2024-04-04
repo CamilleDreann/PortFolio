@@ -1,0 +1,208 @@
+a{
+    color: none;
+}
+/*-------------------------------------------------------------------------------------------------*/
+/*----------------------------------------BOUTON "CONSULTER LE CV"---------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
+
+
+:root{
+    --main-color : #177FCB;
+    --second-color : #FAF7F7;
+    --third-color : #0C0B0B;
+}
+button{
+    position: relative;
+    padding: .57rem 1.14rem;
+    border-radius: 10px;
+    background-color: var(--second-color);
+    color: var(--main-color);
+    font-family: "Righteous";
+    font-size: 1.5rem;
+    border: solid 2px var(--main-color);
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    transition: all 1.5s cubic-bezier(.25,1,.5,1);
+    mask-image: radial-gradient(var(--second-color),var(--main-color));
+    width: 250px;
+}
+
+button h3{
+    position: relative;
+    z-index: 2;
+}
+
+
+button .remplissage{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-bottom: 100%;
+    transform: translateY(-150%) translateX(50%) rotate(180deg);
+    z-index: -1;
+}
+button .remplissage::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 100%;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    transition: all 1.5s cubic-bezier(.25,1,.5,1);
+    
+}
+
+::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button:hover{
+color: var(--second-color);
+}
+
+
+
+button:hover .remplissage::after{
+    transform: translateY(-100%);
+}
+
+header button{
+    width: auto;
+    height: 60px;
+}
+
+.projet button{
+    border-color: none;
+}
+
+header button .remplissage::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 200%;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    transition: all 1.5s cubic-bezier(.25,1,.5,1); 
+}
+
+a:visited{
+    color: inherit;
+}
+
+
+.logocontact{
+    fill: var(--main-color);
+}
+
+.logocontact:hover{
+    fill: var(--third-color);
+}
+
+
+.SavoirPlus {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    vertical-align: top;
+}
+
+.SavoirPlus::before,
+.SavoirPlus::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+.SavoirPlus::before {
+    background-color: var(--main-color);
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.SavoirPlus::after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: var(--main-color);
+}
+
+.SavoirPlus:hover::after {
+    transform: translate3d(0, 0, 0);
+}
+
+.SavoirPlus span {
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.SavoirPlus:hover span {
+    transform: translate3d(-200%, 0, 0);
+}
+
+  
+  .plus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 60px;
+  }
+  .plus p {
+    font-size: 1.5rem;
+    color: var(--third-color);
+    font-family: "Righteous";
+  }
+  .plus a {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    font-family: "Righteous";
+  }
+  
+  a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+  }
+
+  .menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: width 0.3s ease;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+}

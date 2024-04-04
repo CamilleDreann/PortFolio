@@ -1,0 +1,310 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--second-color);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+:root {
+    --main-color: #177FCB;
+    --second-color: #FAF7F7;
+    --third-color: #0C0B0B;
+}
+
+p {
+    font-family: 'Raleway';
+    font-size: 16px;
+}
+
+.conteneur {
+    width: 70%;
+    margin: 0 auto;
+    
+}
+
+.conteneur img {
+    width: 200%;
+    user-select: none;
+}
+
+@media (max-width: 1250px) {
+    .conteneur img {
+        width: 300%;
+    }
+    
+ }
+
+.presentation {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.texte_presentation {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin-left: 20px;
+}
+
+.texte_presentation p {
+    margin: 20px 0;
+}
+
+h1 {
+    font-family: "Righteous";
+    font-size: 3rem;
+    color: var(--third-color);
+}
+
+h2 {
+    color: var(--main-color);
+    font-family: "Righteous";
+    font-size: 2rem;
+}
+
+h3 {
+    color: var(--main-color);
+    font-family: "Righteous";
+    font-size: 1.5rem;
+}
+
+
+svg {
+    width: 50px;
+    height: 50px;
+    user-select: none;
+}
+
+.titre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px 0 20px 0;
+}
+
+
+.Partie_Compétences {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.bloc_comp {
+    width: 40%;
+    margin: 40px 0;
+    gap: 30px;
+}
+
+.nom_Competence {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.outils {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.outils img {
+    width: 70px;
+}
+
+.outils li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-image: url(../media/images/fond.jpg);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header h1{
+    margin: 100px;
+}
+.barnav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    font-family: "Righteous";
+    width: 70%;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 30px 30px;
+    position: relative;
+    color: var(--main-color);
+}
+
+.menu li:hover::after {
+    width: 100%;
+}
+
+header img {
+    height: 80px;
+}
+
+.ligne {
+    margin: 10px 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--third-color);
+}
+
+.liste_projets {
+    margin: 0 3%;
+}
+
+.nom_projet {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.groupe_projet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.groupe_projet .imageProjet {
+    width: 200px;
+    object-fit: contain;
+    opacity: 0;
+}
+.projets:hover{
+    cursor: pointer;
+}
+.projets:hover .imageProjet {
+    opacity: 1;
+    transition: all 1s cubic-bezier(.25, 1, .5, 1);
+}
+
+.contenu_projet {
+    display: none;
+     transition: all 0.5s ease;
+}
+
+
+.projets.deplie .contenu_projet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.projets.deplie .contenu_projet .imageProjet {
+    object-fit: contain;
+    width: 400px;
+}
+
+.arrowDown {
+    transition: transform 0.5s ease;
+    width: 50px;
+}
+
+.arrowDown.rotate {
+    transform: rotate(180deg);
+}
+
+.imageProjet.deplie {
+    display: none;
+}
+.outils_utile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+
+}
+.outilsbloc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.outils_utile img{
+    width: 50px;
+    height: 50px;
+    user-select: none;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    text-align: justify;
+    gap: 10px;
+}
+
+
+footer{
+    height: 300px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    user-select: none;
+}
+.contact svg{
+    width: 100px;
+    height: 100px;
+
+}
+.contactpresentation{
+    display: flex;
+    gap :10px;
+}
+.bienvenue{
+    color: #177FCB;
+    font-size: 4rem;
+    border-bottom: var(--second-color) solid;
+    margin: 150px 0 10px;
+}
+
+.portfolio{
+    margin: 0;
+}
